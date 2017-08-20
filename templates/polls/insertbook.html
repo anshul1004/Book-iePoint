@@ -1,0 +1,59 @@
+{% extends "polls/header.html" %}
+{% load staticfiles %}
+<div id="templatemo_container">
+	{% block content %}
+    	<div id="templatemo_content">
+        	<div id="templatemo_content_left">
+        		<div class="templatemo_content_left_section">
+            			<h1>Categories</h1>
+				<ul>
+					<li><a href="https://en.wikipedia.org/wiki/Science_fiction" target="_blank">Science Fiction</a></li>
+					<li><a href="https://en.wikipedia.org/wiki/Satire" target="_blank">Satire</a></li>
+					<li><a href="https://en.wikipedia.org/wiki/Action" target="_blank">Action</a></li>
+					<li><a href="https://en.wikipedia.org/wiki/Romance" target="_blank">Romance</a></li>
+					<li><a href="https://en.wikipedia.org/wiki/Mystery" target="_blank">Mystery</a></li>
+					<li><a href="https://en.wikipedia.org/wiki/Self_Help" target="_blank">Self Help</a></li>
+					<li><a href="https://en.wikipedia.org/wiki/Guide" target="_blank">Guide</a></li>
+					<li><a href="https://en.wikipedia.org/wiki/Travel" target="_blank">Travel</a></li>
+					<li><a href="https://en.wikipedia.org/wiki/Religious" target="_blank">Religious</a></li>
+					<li><a href="https://en.wikipedia.org/wiki/Engineering" target="_blank">Engineering</a></li>
+					<li><a href="https://en.wikipedia.org/wiki/Medical" target="_blank">Medical</a></li>
+					<li><a href="https://en.wikipedia.org/wiki/Law" target="_blank">Law</a></li>
+					<li><a href="https://en.wikipedia.org/wiki/Exams" target="_blank">Competitive Exams</a></li>
+					<li><a href="https://en.wikipedia.org/wiki/Magazines" target="_blank">Magazines</a></li>
+				</ul>
+            		</div>
+        	</div> <!-- end of content left -->
+        	<div id="templatemo_content_right">
+			<h1 align="center">Insert Book</h1><br />
+				<form method="post" action="/polls/insert">
+					{% csrf_token %}
+					<table>
+						<tr>
+							<td>Title:</td>
+							<td><input type="text" name="title" placeholder="Enter title of the book"></td>
+						</tr>
+						<tr>
+							<td>Author:</td>
+							<td><input type="text" name="author" placeholder="Enter author name"></td>
+						</tr>
+						<tr>
+							<td>Publisher:</td>
+							<td><input type="text" name="publisher" placeholder="Enter publisher name"></td>
+						</tr>
+						<tr>
+							<td>Price:</td>
+							<td><input type="text" name="price" placeholder="Enter book price"></td>
+						</tr>
+						<tr>
+							<td>Number of copies:</td>
+							<td><input type="text" name="num_copies" placeholder="Enter number of copies"></td>
+						</tr>
+					</table><br />
+					<button type="submit">Insert</button>
+				</form>
+            		<div class="cleaner_with_width">&nbsp;</div>
+        	</div> <!-- end of content right -->
+    		<div class="cleaner_with_height">&nbsp;</div>
+	{% endblock %}
+    	</div> <!-- end of content -->

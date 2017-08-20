@@ -1,0 +1,44 @@
+{% load staticfiles %}
+<html>
+<head>
+	<title>The Book'ie Point!</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'polls/templatemo_style.css' %}" />
+</head>
+<body>
+<div id="templatemo_container">
+	<div id="templatemo_menu">
+	    	<ul>
+		    <li><a href="index" class="current">Home</a></li>
+		    <li><a href="searchbook" class="current">Search</a></li>
+		    <li><a href="bookslist" class="current">Books</a></li>            
+		    <li><a href="insertbook" class="current">Insert</a></li> 
+		    <li><a href="deletebook" class="current">Delete</a></li>  
+		    <li><a href="../admin" target="_blank" class="current">Admin</a></li> 
+		    <li><a href="contact" class="current">Contact</a></li>
+	    	</ul>
+    	</div> <!-- end of menu -->
+    	<div id="templatemo_header">
+    		<div id="templatemo_special_offers">
+        		<p> <font size=3>
+                	<span>50%</span> discounts for purchase over Rs. 999
+                	<span>25%</span> discounts for purchase over Rs. 499
+        		</p>
+        	</div>
+        	<div id="templatemo_new_books">
+        		<ul>
+		        	<li>Go Set a Watchman - Harper Lee</li>
+		        	<li>Scion of Ikshvaku - Amish Tripathi</li>
+            		</ul></font>
+        	</div>
+    	</div> <!-- end of header -->
+	{% block content %}
+	{% endblock %}
+    	</div> <!-- end of content -->
+	<div id="templatemo_footer"><font size=2>
+		<a href="index">Home</a> | <a href="searchbook">Search</a> | <a href="bookslist">Books</a> | 			<a href="insertbook">Insert</a> | <a href="deletebook">Delete</a> | <a href="../admin" target="_blank">Admin</a> | <a href="contact">Contact Us</a><br />
+        	Copyright © 2015 <a href="index"><strong>The Book'ie Point!</strong></a> 
+        </div> </font>
+    <!-- end of footer -->
+</div> <!-- end of container -->
+</body>
+</html>
